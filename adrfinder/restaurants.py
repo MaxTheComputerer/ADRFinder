@@ -16,7 +16,7 @@ class Restaurants(object):
         payload = "{}"
         headers = {}
 
-        connection = http.client.HTTPSConnection("disneyworld.disney.go.com")
+        connection = http.client.HTTPSConnection("www.disneyworld.co.uk")
 
         try:
             connection.request("POST", "/finder/api/v1/authz/public", payload, headers)
@@ -46,7 +46,7 @@ class Restaurants(object):
 
         yyyymmdd = datetime.datetime.today().strftime('%Y-%m-%d')
 
-        connection = http.client.HTTPSConnection("disneyworld.disney.go.com")
+        connection = http.client.HTTPSConnection("www.disneyworld.co.uk")
 
         try:
             connection.request("GET", "/finder/api/v1/explorer-service/list-ancestor-entities/wdw/80007798;entityType=destination/" + yyyymmdd + "/dining", headers=self.header)
